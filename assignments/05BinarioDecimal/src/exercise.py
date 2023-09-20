@@ -8,10 +8,10 @@ def binario_decimal(datoBinario):
         if numero != "0" and numero != "1":
             return -1
     decimal = 0
-    posicion = 0
+    posicion = len(datoBinario) - 1
     for numero in datoBinario:
-        decimal += int(2) ** posicion
-        posicion += 1
+        decimal += int(numero) * (2) ** posicion
+        posicion -= 1
     return decimal
 
 def main():
